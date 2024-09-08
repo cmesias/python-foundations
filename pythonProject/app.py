@@ -212,7 +212,6 @@ for num in range_three_param:
 
 print("")
 
-
 ###################################################################
 ###################################################################
 ##----------------------------- tuples --------------------------##
@@ -222,9 +221,41 @@ tuple_numbers = (5, 4, 33, 55, 68)
 # replace the first index (5) with 73
 # tuple_numbers[0] = 73                     # error because tuples are not immutable, you cannot modify them
 
+###################################################################
+###################################################################
+##----------------------------- Classes -------------------------##
 
+# Create a new class of residents
+class Resident:
+    def __init__(self, first_name, last_name, birth_year, birth_month, birth_day, status, cpr, diagnosis):
+        self._first_name    = first_name
+        self._last_name     = last_name
+        self._birth_year    = birth_year
+        self._birth_month   = birth_month
+        self._birth_day     = birth_day
+        self._status        = status
+        self._cpr           = cpr
+        self._diagnosis     = diagnosis
 
+    def __str__(self):
+        return f"{self._first_name} {self._last_name} \n- Diagnosis: {self._diagnosis}"
 
+# create a new resident named 'Jane Done', who was born on March 3, 1980, status of 'current_resident' and 'CPR' status
+resident1 = Resident("Jane", "Doe",
+                    1980, 3, 25,
+                    "current_resident", "CPR", "High blood pressure")
+
+# create a new resident named 'Julius Caesar', who was born on July 12, 100 BC, status of 'nonresident'  and 'DNR' status
+resident2 = Resident("Julius", "Caesar",
+                    100, 7, 12,
+                    "current_resident", "DNR", "Very afraid of knives")
+
+# Print Jane Doe's data
+print(resident1)
+print("")
+
+# Print Julius Caesar's data
+print(resident2)
 
 
 
