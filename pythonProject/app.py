@@ -257,6 +257,15 @@ print("")
 # Print Julius Caesar's data
 print(resident2)
 
-
+### Output ###
+#
+#
+# Jane Doe
+# - Diagnosis: High blood pressure
+#
+# Julius Caesar
+# - Diagnosis: Very afraid of knives
+#
+#
 
 
